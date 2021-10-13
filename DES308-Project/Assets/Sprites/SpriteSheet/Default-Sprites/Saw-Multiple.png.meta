@@ -1,0 +1,414 @@
+fileFormatVersion: 2
+guid: 448ee89eed661a64b8bcd00363847add
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2952845370838595740
+    second: Saw (38x38)_0
+  - first:
+      213: -4649337504651466379
+    second: Saw (38x38)_1
+  - first:
+      213: 7544307991480823866
+    second: Saw (38x38)_2
+  - first:
+      213: 2201086333345402277
+    second: Saw (38x38)_3
+  - first:
+      213: -869990983813057892
+    second: Saw (38x38)_4
+  - first:
+      213: -8194292275390785826
+    second: Saw (38x38)_5
+  - first:
+      213: 4671222407677831697
+    second: Saw (38x38)_6
+  - first:
+      213: 4501294873472690999
+    second: Saw (38x38)_7
+  - first:
+      213: 6895891439505466294
+    second: Saw (38x38)_8
+  - first:
+      213: 6097950410841055452
+    second: Saw (38x38)_9
+  - first:
+      213: -6819604620139669209
+    second: Saw (38x38)_10
+  - first:
+      213: 2289803653765445836
+    second: Saw (38x38)_11
+  - first:
+      213: 2642728407579987031
+    second: Saw (38x38)_12
+  - first:
+      213: -2920573935680082031
+    second: Saw (38x38)_13
+  - first:
+      213: 8625372593996582687
+    second: Saw (38x38)_14
+  - first:
+      213: -1818567076134086301
+    second: Saw (38x38)_15
+  - first:
+      213: 6618952211047851498
+    second: Saw (38x38)_16
+  - first:
+      213: 3919288300552827500
+    second: Saw (38x38)_17
+  - first:
+      213: -117107319698814489
+    second: Saw (38x38)_18
+  - first:
+      213: -3177119962038732674
+    second: Saw (38x38)_19
+  - first:
+      213: 171038810615547330
+    second: Saw (38x38)_20
+  - first:
+      213: 1919984803602309297
+    second: Saw (38x38)_21
+  - first:
+      213: 8138798824476833021
+    second: Saw (38x38)_22
+  - first:
+      213: -5864874707668027130
+    second: Saw (38x38)_23
+  - first:
+      213: 1466075294899003223
+    second: Saw (38x38)_24
+  - first:
+      213: -3973651399472269766
+    second: Saw (38x38)_25
+  - first:
+      213: 4819298420444443050
+    second: Saw (38x38)_26
+  - first:
+      213: -7320557670454625988
+    second: Saw (38x38)_27
+  - first:
+      213: -4591627173258278970
+    second: Saw (38x38)_28
+  - first:
+      213: 7241689725944629844
+    second: Saw (38x38)_29
+  - first:
+      213: 3527166597413121446
+    second: Saw (38x38)_30
+  - first:
+      213: 2470242540086590218
+    second: Saw (38x38)_31
+  - first:
+      213: -5968838702400137872
+    second: Saw (38x38)_32
+  - first:
+      213: -8443260662243994548
+    second: Saw (38x38)_33
+  - first:
+      213: -2993279680872730157
+    second: Saw (38x38)_34
+  - first:
+      213: 33295092508617100
+    second: Saw (38x38)_35
+  - first:
+      213: -6342167922489865221
+    second: Saw (38x38)_36
+  - first:
+      213: 6025372550064659604
+    second: Saw (38x38)_37
+  - first:
+      213: -6543738162174979066
+    second: Saw-Multiple_0
+  - first:
+      213: -4216305044146362043
+    second: Saw-Multiple_1
+  - first:
+      213: 6723859389241849842
+    second: Saw-Multiple_2
+  - first:
+      213: 6225198107942006839
+    second: Saw-Multiple_3
+  - first:
+      213: 698564676210094411
+    second: Saw-Multiple_4
+  - first:
+      213: -4708497931440638604
+    second: Saw-Multiple_5
+  - first:
+      213: 7052401241728247767
+    second: Saw-Multiple_6
+  - first:
+      213: -1056436143227930361
+    second: Saw-Multiple_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Saw-Multiple_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604946ccfc8ff25a0800000000000000
+      internalID: -6543738162174979066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Saw-Multiple_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549e7fab6ecac75c0800000000000000
+      internalID: -4216305044146362043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Saw-Multiple_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f77f6f6d72ff4d50800000000000000
+      internalID: 6723859389241849842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Saw-Multiple_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730315852b8546650800000000000000
+      internalID: 6225198107942006839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Saw-Multiple_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4173223fdcc1b900800000000000000
+      internalID: 698564676210094411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Saw-Multiple_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475b1daf31e08aeb0800000000000000
+      internalID: -4708497931440638604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Saw-Multiple_6
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d76cba60992fd160800000000000000
+      internalID: 7052401241728247767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Saw-Multiple_7
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709f30bcce8c651f0800000000000000
+      internalID: -1056436143227930361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
