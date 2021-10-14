@@ -16,5 +16,4 @@ public class PlayerKillCollider : MonoBehaviour
             collision.GetComponent<HealthController>().DamageTaken(_Damage);
         }
     }
-
 }

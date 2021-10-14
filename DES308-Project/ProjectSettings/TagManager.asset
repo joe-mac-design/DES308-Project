@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - heatmap
   layers:
   - Default
   - TransparentFX
@@ -44,11 +45,11 @@ TagManager:
   - name: Background
     uniqueID: 3332934725
     locked: 0
-  - name: Foreground
-    uniqueID: 1327242715
-    locked: 0
   - name: Player
     uniqueID: 3132894649
+    locked: 0
+  - name: Foreground
+    uniqueID: 1327242715
     locked: 0
   - name: Ground
     uniqueID: 3132163741

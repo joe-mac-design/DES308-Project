@@ -20,6 +20,7 @@ public class HealthController : MonoBehaviour
 
         if (_currentHealth <= 0) // if the player health is 0, destroy the player (gameObject)
         {
+            DataRecorder.recordDeathPosition3D(transform.position);
             Destroy(gameObject);
             Debug.Log("Player Died");
             //SceneManager.LoadScene(2);

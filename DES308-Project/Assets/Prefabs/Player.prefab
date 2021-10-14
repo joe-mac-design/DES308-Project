@@ -150,7 +150,7 @@ MonoBehaviour:
     m_Bits: 64
   _movementAcceleration: 50
   _maxMoveSpeed: 12
-  _groundLinearDrag: 0
+  _groundLinearDrag: 5
   _jumpForce: 12
   _airLinearDrag: 2.5
   _fallMultiplier: 8
