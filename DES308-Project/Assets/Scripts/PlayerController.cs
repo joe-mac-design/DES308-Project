@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     [Header("Components")]
     private Rigidbody2D _rigidBody2D;
 
@@ -16,8 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _movementAcceleration;
     [SerializeField] private float _maxMoveSpeed;
     [SerializeField] private float _groundLinearDrag;
-    private float _horizontalDirection;
-    private bool _changingDirection => (_rigidBody2D.velocity.x > 0f && _horizontalDirection < 0f) || (_rigidBody2D.velocity.x < 0f && _horizontalDirection > 0f);
+    private float _playerDirection;
+    private bool _changingDirection => (_rigidBody2D.velocity.x > 0f && _playerDirection < 0f) || (_rigidBody2D.velocity.x < 0f && _playerDirection > 0f);
 
     [Header("Jump")]
     [SerializeField] private float _jumpForce = 12;
@@ -38,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        _horizontalDirection = GetInput().x;
+        _playerDirection = GetInput().x;
         if (_canJump) Jump();
     }
 
@@ -64,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
     private void MoveCharacter()
     {
-        _rigidBody2D.AddForce(new Vector2(_horizontalDirection, 0f) * _movementAcceleration);
+        _rigidBody2D.AddForce(new Vector2(_playerDirection, 0f) * _movementAcceleration);
         if(Mathf.Abs(_rigidBody2D.velocity.x) > _maxMoveSpeed)
         {
             _rigidBody2D.velocity = new Vector2(Mathf.Sign(_rigidBody2D.velocity.x) * _maxMoveSpeed, _rigidBody2D.velocity.y);
@@ -73,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyGroundLinearDrag()
     {
-        if (Mathf.Abs(_horizontalDirection) < 0.4f || _changingDirection)
+        if (Mathf.Abs(_playerDirection) < 0.4f || _changingDirection)
         {
             _rigidBody2D.drag = _groundLinearDrag;
         }
@@ -92,6 +91,7 @@ public class PlayerController : MonoBehaviour
     {
         _rigidBody2D.velocity = new Vector2(_rigidBody2D.velocity.x, 0f);
         _rigidBody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        Debug.Log("Player Jumped");
     }
 
     private void FallMultiplier()
@@ -99,14 +99,17 @@ public class PlayerController : MonoBehaviour
         if (_rigidBody2D.velocity.y < 0)
         {
             _rigidBody2D.gravityScale = _fallMultiplier;
+            //Debug.Log(_fallMultiplier);
         }
         else if (_rigidBody2D.velocity.y > 0 && !Input.GetButton("Jump"))
         {
             _rigidBody2D.gravityScale = _lowJumpFallMultiplier;
+            //Debug.Log(_lowJumpFallMultiplier);
         }
         else
         {
             _rigidBody2D.gravityScale = 1f;
+            //Debug.Log("Big Jump");
         }
     }
 
@@ -126,5 +129,4 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawLine(transform.position - _groundRaycastOffset, transform.position - _groundRaycastOffset + Vector3.down * _groundRaycastLength);
 
     }
-
 }

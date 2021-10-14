@@ -21,7 +21,8 @@ public class HealthController : MonoBehaviour
         if (_currentHealth <= 0) // if the player health is 0, destroy the player (gameObject)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene(2);
+            Debug.Log("Player Died");
+            //SceneManager.LoadScene(2);
         }
         
     }
@@ -29,6 +30,6 @@ public class HealthController : MonoBehaviour
     public void AddHealth(float _healthValue)
     {
         _currentHealth = Mathf.Clamp(_currentHealth + _healthValue, 0, _defaultHealth); // Assign a value to the object
+        Debug.Log("Player restored " + _healthValue + " Health point");
     }
-
 }

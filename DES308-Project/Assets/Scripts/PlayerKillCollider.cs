@@ -11,6 +11,7 @@ public class PlayerKillCollider : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            Debug.Log("Player fell off map");
             collision.transform.position = _respawnPoint.position;
             collision.GetComponent<HealthController>().DamageTaken(_Damage);
         }

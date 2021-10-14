@@ -9,7 +9,8 @@ public class FlagController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(3);
+            Debug.Log("Player Reached the finish");
+            //SceneManager.LoadScene(3);
         }
     }
 }
