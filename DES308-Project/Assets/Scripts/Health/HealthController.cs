@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
 public class HealthController : MonoBehaviour
 {
     [SerializeField] private float _defaultHealth;
+    [SerializeField] private GameObject deathCanvas;
     public float _currentHealth { get; private set; } // available in other scripts but can only bet set in this script
 
     private void Awake()
@@ -21,9 +23,9 @@ public class HealthController : MonoBehaviour
         if (_currentHealth <= 0) // if the player health is 0, destroy the player (gameObject)
         {
             DataRecorder.recordDeathPosition3D(transform.position);
+            deathCanvas.SetActive(true);
             Destroy(gameObject);
             Debug.Log("Player Died");
-            //SceneManager.LoadScene(2);
         }
         
     }
