@@ -25,6 +25,7 @@ public class HealthController : MonoBehaviour
             DataRecorder.recordDeathPosition3D(transform.position);
             deathCanvas.SetActive(true);
             Destroy(gameObject);
+            Time.timeScale = 0f;
             Debug.Log("Player Died");
         }
         

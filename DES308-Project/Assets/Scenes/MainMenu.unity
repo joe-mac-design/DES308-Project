@@ -1023,7 +1023,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 194679172}
-  - component: {fileID: 194679173}
   m_Layer: 5
   m_Name: ControlsMenu
   m_TagString: Untagged
@@ -1052,58 +1051,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &194679173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194679171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Trigger:
-    m_IsTriggerExpanded: 1
-    m_Type: 0
-    m_LifecycleEvent: 2
-    m_ApplyRules: 0
-    m_Rules:
-      m_Rules: []
-    m_TriggerBool: 0
-    m_InitTime: 5
-    m_RepeatTime: 5
-    m_Repetitions: 0
-    repetitionCount: 0
-  m_EventPayload:
-    m_IsEventExpanded: 1
-    m_StandardEventType: ScreenVisit
-    m_Parameters:
-      m_Parameters:
-      - m_RequirementType: 1
-        m_GroupID: 
-        m_Tooltip: The name of the screen or type of screen visited.
-        m_Name: screen_name
-        m_Value:
-          m_EditingCustomValue: 0
-          m_PopupIndex: 2
-          m_CustomValue: 
-          m_FixedType: 1
-          m_EnumType: UnityEngine.Analytics.ScreenName
-          m_EnumTypeIsCustomizable: 1
-          m_CanDisable: 0
-          m_PropertyType: 1
-          m_ValueType: enum
-          m_Value: settings
-          m_Target:
-            m_Target: {fileID: 0}
-            m_Path: 
-            m_ValidTypeNames:
-            - enum
-            m_Type: enum
-            m_EnumType: UnityEngine.Analytics.ScreenName
-    m_Name: screen_visit
 --- !u!1 &297269257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,32 +1227,39 @@ MonoBehaviour:
     repetitionCount: 0
   m_EventPayload:
     m_IsEventExpanded: 1
-    m_StandardEventType: TutorialSkip
+    m_StandardEventType: CustomEvent
     m_Parameters:
       m_Parameters:
-      - m_RequirementType: 2
+      - m_RequirementType: 0
         m_GroupID: 
-        m_Tooltip: The tutorial name or ID.
-        m_Name: tutorial_id
+        m_Tooltip: 
+        m_Name: Tutorial Confirm
         m_Value:
           m_EditingCustomValue: 0
           m_PopupIndex: 0
           m_CustomValue: 
-          m_FixedType: 1
+          m_FixedType: 0
           m_EnumType: 
           m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
+          m_CanDisable: 0
           m_PropertyType: 1
           m_ValueType: System.String
-          m_Value: Player Skipped Tutorial
+          m_Value: No
           m_Target:
             m_Target: {fileID: 0}
             m_Path: 
             m_ValidTypeNames:
+            - System.Int32
+            - System.Boolean
+            - System.Decimal
+            - System.Double
+            - System.Single
+            - System.Int64
+            - System.Int16
             - System.String
             m_Type: System.String
             m_EnumType: 
-    m_Name: tutorial_skip
+    m_Name: Tutorial-Selection
 --- !u!1 &304047474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,6 +1372,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 304047480}
+        m_TargetAssemblyTypeName: UnityEngine.Analytics.AnalyticsEventTracker, Unity.Analytics.Tracker
+        m_MethodName: TriggerEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &304047478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,7 +1436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Trigger:
     m_IsTriggerExpanded: 1
-    m_Type: 0
+    m_Type: 1
     m_LifecycleEvent: 2
     m_ApplyRules: 0
     m_Rules:
@@ -1482,32 +1448,39 @@ MonoBehaviour:
     repetitionCount: 0
   m_EventPayload:
     m_IsEventExpanded: 1
-    m_StandardEventType: TutorialStart
+    m_StandardEventType: CustomEvent
     m_Parameters:
       m_Parameters:
-      - m_RequirementType: 2
+      - m_RequirementType: 0
         m_GroupID: 
-        m_Tooltip: The tutorial name or ID.
-        m_Name: tutorial_id
+        m_Tooltip: 
+        m_Name: Tutorial Confirm
         m_Value:
           m_EditingCustomValue: 0
           m_PopupIndex: 0
           m_CustomValue: 
-          m_FixedType: 1
+          m_FixedType: 0
           m_EnumType: 
           m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
+          m_CanDisable: 0
           m_PropertyType: 1
           m_ValueType: System.String
-          m_Value: Player Started Tutorial
+          m_Value: Yes
           m_Target:
             m_Target: {fileID: 0}
             m_Path: 
             m_ValidTypeNames:
+            - System.Int32
+            - System.Boolean
+            - System.Decimal
+            - System.Double
+            - System.Single
+            - System.Int64
+            - System.Int16
             - System.String
             m_Type: System.String
             m_EnumType: 
-    m_Name: tutorial_start
+    m_Name: Tutorial-Selection
 --- !u!1 &393684129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,7 +2812,31 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1330288133}
+        m_TargetAssemblyTypeName: ReadInput, Assembly-CSharp
+        m_MethodName: ReadStringInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1330288133}
+        m_TargetAssemblyTypeName: ReadInput, Assembly-CSharp
+        m_MethodName: DisplayInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -3111,49 +3108,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330288130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f48b9b531d81b34d948912320db5803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Trigger:
-    m_IsTriggerExpanded: 1
-    m_Type: 0
-    m_LifecycleEvent: 0
-    m_ApplyRules: 0
-    m_Rules:
-      m_Rules: []
-    m_TriggerBool: 0
-    m_InitTime: 5
-    m_RepeatTime: 5
-    m_Repetitions: 0
-    repetitionCount: 0
-  m_EventPayload:
-    m_IsEventExpanded: 1
-    m_StandardEventType: ScreenVisit
-    m_Parameters:
-      m_Parameters:
-      - m_RequirementType: 1
-        m_GroupID: 
-        m_Tooltip: The name of the screen or type of screen visited.
-        m_Name: screen_name
-        m_Value:
-          m_EditingCustomValue: 0
-          m_PopupIndex: 1
-          m_CustomValue: 
-          m_FixedType: 1
-          m_EnumType: UnityEngine.Analytics.ScreenName
-          m_EnumTypeIsCustomizable: 1
-          m_CanDisable: 0
-          m_PropertyType: 1
-          m_ValueType: enum
-          m_Value: main_menu
-          m_Target:
-            m_Target: {fileID: 0}
-            m_Path: 
-            m_ValidTypeNames:
-            - enum
-            m_Type: enum
-            m_EnumType: UnityEngine.Analytics.ScreenName
-    m_Name: screen_visit
 --- !u!1 &1410884312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,7 +3190,6 @@ GameObject:
   - component: {fileID: 1416332648}
   - component: {fileID: 1416332647}
   - component: {fileID: 1416332646}
-  - component: {fileID: 1416332650}
   m_Layer: 5
   m_Name: Yes-Button
   m_TagString: Untagged
@@ -3370,80 +3326,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416332644}
   m_CullTransparentMesh: 1
---- !u!114 &1416332650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1416332644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Trigger:
-    m_IsTriggerExpanded: 1
-    m_Type: 1
-    m_LifecycleEvent: 2
-    m_ApplyRules: 0
-    m_Rules:
-      m_Rules: []
-    m_TriggerBool: 0
-    m_InitTime: 5
-    m_RepeatTime: 5
-    m_Repetitions: 0
-    repetitionCount: 0
-  m_EventPayload:
-    m_IsEventExpanded: 1
-    m_StandardEventType: GameOver
-    m_Parameters:
-      m_Parameters:
-      - m_RequirementType: 2
-        m_GroupID: 
-        m_Tooltip: The order of this level within the game.
-        m_Name: level_index
-        m_Value:
-          m_EditingCustomValue: 0
-          m_PopupIndex: 0
-          m_CustomValue: 
-          m_FixedType: 1
-          m_EnumType: 
-          m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
-          m_PropertyType: 0
-          m_ValueType: System.Int32
-          m_Value: 0
-          m_Target:
-            m_Target: {fileID: 1416332644}
-            m_Path: 
-            m_ValidTypeNames:
-            - System.Int32
-            m_Type: System.Int32
-            m_EnumType: 
-      - m_RequirementType: 2
-        m_GroupID: 
-        m_Tooltip: The level name.
-        m_Name: level_name
-        m_Value:
-          m_EditingCustomValue: 0
-          m_PopupIndex: 0
-          m_CustomValue: 
-          m_FixedType: 1
-          m_EnumType: 
-          m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
-          m_PropertyType: 1
-          m_ValueType: System.String
-          m_Value: Player Quit Game
-          m_Target:
-            m_Target: {fileID: 0}
-            m_Path: 
-            m_ValidTypeNames:
-            - System.String
-            m_Type: System.String
-            m_EnumType: 
-    m_Name: game_over
 --- !u!1 &1665481901
 GameObject:
   m_ObjectHideFlags: 0

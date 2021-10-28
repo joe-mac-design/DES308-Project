@@ -41,6 +41,46 @@ public static class DataRecorder {
         return result;
     }
 
+    public static bool recordFallPosition3D(Vector3 _pos)
+    {
+        string filePath = m_path + SceneManager.GetActiveScene().name;
+        bool result = false;
+        string lineToAdd = _pos.x + "," + _pos.y + "," + _pos.z;
+        Debug.Log(lineToAdd);
+        using (StreamWriter sw = File.AppendText(filePath + ".txt")) //This line will try to open the file and if it doesn't exist, it will make it!
+        {
+            //Write death position vector to our text file as a new line
+            sw.WriteLine(lineToAdd);
+            sw.Close();
+        }
+        ////Re-import the file to update the reference in the editor
+        AssetDatabase.ImportAsset(filePath + ".txt");
+        TextAsset asset = Resources.Load<TextAsset>(filePath + ".txt");
+        ////Print the text from the file
+        result = true;//If we get to this part of our code, this means things went ok, so we return true. 
+        return result;
+    }
+
+    public static bool recordPlayerID(string _ID)
+    {
+        string filePath = m_path + "InputField";
+        bool result = false;
+        string lineToAdd = _ID;
+        Debug.Log(lineToAdd);
+        using (StreamWriter sw = File.AppendText(filePath + ".txt")) //This line will try to open the file and if it doesn't exist, it will make it!
+        {
+            //Write death position vector to our text file as a new line
+            sw.WriteLine(lineToAdd);
+            sw.Close();
+        }
+        ////Re-import the file to update the reference in the editor
+        AssetDatabase.ImportAsset(filePath + ".txt");
+        TextAsset asset = Resources.Load<TextAsset>(filePath + ".txt");
+        ////Print the text from the file
+        result = true;//If we get to this part of our code, this means things went ok, so we return true. 
+        return result;
+    }
+
     public static bool recordDeathPosition2D(Vector2 _pos)
     {
         string filePath = m_path + SceneManager.GetActiveScene().name + ".txt";
