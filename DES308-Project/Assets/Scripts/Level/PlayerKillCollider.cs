@@ -12,9 +12,9 @@ public class PlayerKillCollider : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Debug.Log("Player fell off map");
+            DataRecorder.recordDeathPosition3D(collision.transform.position);
+            collision.GetComponent<HealthController>().SendMessage("DamageTaken", _Damage);
             collision.transform.position = _respawnPoint.position;
-            collision.GetComponent<HealthController>().DamageTaken(_Damage);
-            DataRecorder.recordFallPosition3D(transform.position);
         }
     }
 }
