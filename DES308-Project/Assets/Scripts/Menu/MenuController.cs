@@ -43,7 +43,7 @@ public class MenuController : MonoBehaviour
         print("Player Progressed to Level 2" + result);
     }
 
-    public void PlayLevel4()
+    public void PlayLevel3()
     {
         SceneManager.LoadScene(4);
         Time.timeScale = 1f;

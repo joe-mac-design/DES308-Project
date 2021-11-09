@@ -902,6 +902,7 @@ GameObject:
   - component: {fileID: 348153666}
   - component: {fileID: 348153665}
   - component: {fileID: 348153664}
+  - component: {fileID: 348153667}
   m_Layer: 5
   m_Name: Quit-button
   m_TagString: Untagged
@@ -1023,6 +1024,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348153662}
   m_CullTransparentMesh: 1
+--- !u!114 &348153667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348153662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Trigger:
+    m_IsTriggerExpanded: 1
+    m_Type: 0
+    m_LifecycleEvent: 0
+    m_ApplyRules: 0
+    m_Rules:
+      m_Rules: []
+    m_TriggerBool: 0
+    m_InitTime: 5
+    m_RepeatTime: 5
+    m_Repetitions: 0
+    repetitionCount: 0
+  m_EventPayload:
+    m_IsEventExpanded: 1
+    m_StandardEventType: LevelQuit
+    m_Parameters:
+      m_Parameters:
+      - m_RequirementType: 1
+        m_GroupID: level
+        m_Tooltip: The level name. Either level_name or level_index is required.
+        m_Name: level_name
+        m_Value:
+          m_EditingCustomValue: 0
+          m_PopupIndex: 0
+          m_CustomValue: 
+          m_FixedType: 1
+          m_EnumType: 
+          m_EnumTypeIsCustomizable: 0
+          m_CanDisable: 1
+          m_PropertyType: 1
+          m_ValueType: System.String
+          m_Value: Quit On Death
+          m_Target:
+            m_Target: {fileID: 0}
+            m_Path: 
+            m_ValidTypeNames:
+            - System.String
+            m_Type: System.String
+            m_EnumType: 
+      - m_RequirementType: 1
+        m_GroupID: level
+        m_Tooltip: The order of this level within the game. Either level_name or
+          level_index is required.
+        m_Name: level_index
+        m_Value:
+          m_EditingCustomValue: 0
+          m_PopupIndex: 0
+          m_CustomValue: 
+          m_FixedType: 1
+          m_EnumType: 
+          m_EnumTypeIsCustomizable: 0
+          m_CanDisable: 1
+          m_PropertyType: 0
+          m_ValueType: System.Int32
+          m_Value: 0
+          m_Target:
+            m_Target: {fileID: 0}
+            m_Path: 
+            m_ValidTypeNames:
+            - System.Int32
+            m_Type: System.Int32
+            m_EnumType: 
+    m_Name: level_quit
 --- !u!1 &437461501
 GameObject:
   m_ObjectHideFlags: 0
@@ -15871,6 +15947,7 @@ GameObject:
   - component: {fileID: 712569229}
   - component: {fileID: 712569228}
   - component: {fileID: 712569227}
+  - component: {fileID: 712569226}
   m_Layer: 5
   m_Name: DeathCanvas
   m_TagString: Untagged
@@ -15878,6 +15955,81 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &712569226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712569225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Trigger:
+    m_IsTriggerExpanded: 1
+    m_Type: 0
+    m_LifecycleEvent: 3
+    m_ApplyRules: 0
+    m_Rules:
+      m_Rules: []
+    m_TriggerBool: 0
+    m_InitTime: 5
+    m_RepeatTime: 5
+    m_Repetitions: 0
+    repetitionCount: 0
+  m_EventPayload:
+    m_IsEventExpanded: 1
+    m_StandardEventType: LevelFail
+    m_Parameters:
+      m_Parameters:
+      - m_RequirementType: 1
+        m_GroupID: level
+        m_Tooltip: The level name. Either level_name or level_index is required.
+        m_Name: level_name
+        m_Value:
+          m_EditingCustomValue: 0
+          m_PopupIndex: 0
+          m_CustomValue: 
+          m_FixedType: 1
+          m_EnumType: 
+          m_EnumTypeIsCustomizable: 0
+          m_CanDisable: 1
+          m_PropertyType: 1
+          m_ValueType: System.String
+          m_Value: Tutorial Level Failed
+          m_Target:
+            m_Target: {fileID: 0}
+            m_Path: 
+            m_ValidTypeNames:
+            - System.String
+            m_Type: System.String
+            m_EnumType: 
+      - m_RequirementType: 1
+        m_GroupID: level
+        m_Tooltip: The order of this level within the game. Either level_name or
+          level_index is required.
+        m_Name: level_index
+        m_Value:
+          m_EditingCustomValue: 0
+          m_PopupIndex: 0
+          m_CustomValue: 
+          m_FixedType: 1
+          m_EnumType: 
+          m_EnumTypeIsCustomizable: 0
+          m_CanDisable: 1
+          m_PropertyType: 0
+          m_ValueType: System.Int32
+          m_Value: 0
+          m_Target:
+            m_Target: {fileID: 0}
+            m_Path: 
+            m_ValidTypeNames:
+            - System.Int32
+            m_Type: System.Int32
+            m_EnumType: 
+    m_Name: level_fail
 --- !u!114 &712569227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16569,7 +16721,6 @@ GameObject:
   - component: {fileID: 802827853}
   - component: {fileID: 802827852}
   - component: {fileID: 802827854}
-  - component: {fileID: 802827855}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -16618,58 +16769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1432a4f6bb6ab414690d4e24759f9cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &802827855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802827851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Trigger:
-    m_IsTriggerExpanded: 1
-    m_Type: 0
-    m_LifecycleEvent: 2
-    m_ApplyRules: 0
-    m_Rules:
-      m_Rules: []
-    m_TriggerBool: 0
-    m_InitTime: 5
-    m_RepeatTime: 5
-    m_Repetitions: 0
-    repetitionCount: 0
-  m_EventPayload:
-    m_IsEventExpanded: 1
-    m_StandardEventType: TutorialStart
-    m_Parameters:
-      m_Parameters:
-      - m_RequirementType: 2
-        m_GroupID: 
-        m_Tooltip: The tutorial name or ID.
-        m_Name: tutorial_id
-        m_Value:
-          m_EditingCustomValue: 0
-          m_PopupIndex: 0
-          m_CustomValue: 
-          m_FixedType: 1
-          m_EnumType: 
-          m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
-          m_PropertyType: 1
-          m_ValueType: System.String
-          m_Value: Player Started Tutorial
-          m_Target:
-            m_Target: {fileID: 0}
-            m_Path: 
-            m_ValidTypeNames:
-            - System.String
-            m_Type: System.String
-            m_EnumType: 
-    m_Name: tutorial_start
 --- !u!1 &817907707
 GameObject:
   m_ObjectHideFlags: 0
@@ -16847,6 +16946,7 @@ GameObject:
   - component: {fileID: 830840267}
   - component: {fileID: 830840266}
   - component: {fileID: 830840265}
+  - component: {fileID: 830840268}
   m_Layer: 5
   m_Name: Quit-button
   m_TagString: Untagged
@@ -16968,6 +17068,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830840263}
   m_CullTransparentMesh: 1
+--- !u!114 &830840268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830840263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Trigger:
+    m_IsTriggerExpanded: 1
+    m_Type: 0
+    m_LifecycleEvent: 0
+    m_ApplyRules: 0
+    m_Rules:
+      m_Rules: []
+    m_TriggerBool: 0
+    m_InitTime: 5
+    m_RepeatTime: 5
+    m_Repetitions: 0
+    repetitionCount: 0
+  m_EventPayload:
+    m_IsEventExpanded: 1
+    m_StandardEventType: LevelQuit
+    m_Parameters:
+      m_Parameters:
+      - m_RequirementType: 1
+        m_GroupID: level
+        m_Tooltip: The level name. Either level_name or level_index is required.
+        m_Name: level_name
+        m_Value:
+          m_EditingCustomValue: 0
+          m_PopupIndex: 0
+          m_CustomValue: 
+          m_FixedType: 1
+          m_EnumType: 
+          m_EnumTypeIsCustomizable: 0
+          m_CanDisable: 1
+          m_PropertyType: 1
+          m_ValueType: System.String
+          m_Value: Quit On Completion
+          m_Target:
+            m_Target: {fileID: 0}
+            m_Path: 
+            m_ValidTypeNames:
+            - System.String
+            m_Type: System.String
+            m_EnumType: 
+      - m_RequirementType: 1
+        m_GroupID: level
+        m_Tooltip: The order of this level within the game. Either level_name or
+          level_index is required.
+        m_Name: level_index
+        m_Value:
+          m_EditingCustomValue: 0
+          m_PopupIndex: 0
+          m_CustomValue: 
+          m_FixedType: 1
+          m_EnumType: 
+          m_EnumTypeIsCustomizable: 0
+          m_CanDisable: 1
+          m_PropertyType: 0
+          m_ValueType: System.Int32
+          m_Value: 0
+          m_Target:
+            m_Target: {fileID: 0}
+            m_Path: 
+            m_ValidTypeNames:
+            - System.Int32
+            m_Type: System.Int32
+            m_EnumType: 
+    m_Name: level_quit
 --- !u!1 &886563500
 GameObject:
   m_ObjectHideFlags: 0
@@ -17295,6 +17470,7 @@ GameObject:
   - component: {fileID: 1027417192}
   - component: {fileID: 1027417191}
   - component: {fileID: 1027417190}
+  - component: {fileID: 1027417193}
   m_Layer: 5
   m_Name: RetryLevel-button
   m_TagString: Untagged
@@ -17416,6 +17592,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027417188}
   m_CullTransparentMesh: 1
+--- !u!114 &1027417193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027417188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Trigger:
+    m_IsTriggerExpanded: 1
+    m_Type: 0
+    m_LifecycleEvent: 0
+    m_ApplyRules: 0
+    m_Rules:
+      m_Rules: []
+    m_TriggerBool: 0
+    m_InitTime: 5
+    m_RepeatTime: 5
+    m_Repetitions: 0
+    repetitionCount: 0
+  m_EventPayload:
+    m_IsEventExpanded: 1
+    m_StandardEventType: LevelStart
+    m_Parameters:
+      m_Parameters:
+      - m_RequirementType: 1
+        m_GroupID: level
+        m_Tooltip: The level name. Either level_name or level_index is required.
+        m_Name: level_name
+        m_Value:
+          m_EditingCustomValue: 0
+          m_PopupIndex: 0
+          m_CustomValue: 
+          m_FixedType: 1
+          m_EnumType: 
+          m_EnumTypeIsCustomizable: 0
+          m_CanDisable: 1
+          m_PropertyType: 1
+          m_ValueType: System.String
+          m_Value: Tutorial Retry
+          m_Target:
+            m_Target: {fileID: 0}
+            m_Path: 
+            m_ValidTypeNames:
+            - System.String
+            m_Type: System.String
+            m_EnumType: 
+      - m_RequirementType: 1
+        m_GroupID: level
+        m_Tooltip: The order of this level within the game. Either level_name or
+          level_index is required.
+        m_Name: level_index
+        m_Value:
+          m_EditingCustomValue: 0
+          m_PopupIndex: 0
+          m_CustomValue: 
+          m_FixedType: 1
+          m_EnumType: 
+          m_EnumTypeIsCustomizable: 0
+          m_CanDisable: 1
+          m_PropertyType: 0
+          m_ValueType: System.Int32
+          m_Value: 
+          m_Target:
+            m_Target: {fileID: 0}
+            m_Path: 
+            m_ValidTypeNames:
+            - System.Int32
+            m_Type: System.Int32
+            m_EnumType: 
+    m_Name: level_start
 --- !u!1 &1027612670
 GameObject:
   m_ObjectHideFlags: 0
