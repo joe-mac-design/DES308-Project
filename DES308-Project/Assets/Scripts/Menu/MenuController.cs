@@ -1,11 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+
+    public Canvas ConsentCanvas;
+    public GameObject MainMenuCanvas;
+
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("Consented"))
+        {
+            if (PlayerPrefs.GetInt("Consented") == 1)
+            {
+                ConsentCanvas.gameObject.SetActive(false);
+                PlayerPrefs.DeleteAll();
+                MainMenuCanvas.SetActive(true);
+            }
+        }
+
+    }
+
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
@@ -56,4 +75,10 @@ public class MenuController : MonoBehaviour
         Application.Quit();
         Debug.Log("Quitting Game");
     }
+
+    public void Consent()
+    {
+        PlayerPrefs.SetInt("Consented",1);
+        PlayerPrefs.Save();
+    } 
 }
