@@ -17210,7 +17210,7 @@ GameObject:
   - component: {fileID: 886563504}
   - component: {fileID: 886563503}
   - component: {fileID: 886563502}
-  - component: {fileID: 886563505}
+  - component: {fileID: 886563506}
   m_Layer: 5
   m_Name: NextLevel-button
   m_TagString: Untagged
@@ -17332,7 +17332,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886563500}
   m_CullTransparentMesh: 1
---- !u!114 &886563505
+--- !u!114 &886563506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17358,55 +17358,39 @@ MonoBehaviour:
     repetitionCount: 0
   m_EventPayload:
     m_IsEventExpanded: 1
-    m_StandardEventType: LevelStart
+    m_StandardEventType: CustomEvent
     m_Parameters:
       m_Parameters:
-      - m_RequirementType: 1
-        m_GroupID: level
-        m_Tooltip: The level name. Either level_name or level_index is required.
+      - m_RequirementType: 0
+        m_GroupID: 
+        m_Tooltip: 
         m_Name: level_name
         m_Value:
           m_EditingCustomValue: 0
           m_PopupIndex: 0
           m_CustomValue: 
-          m_FixedType: 1
+          m_FixedType: 0
           m_EnumType: 
           m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
+          m_CanDisable: 0
           m_PropertyType: 1
           m_ValueType: System.String
-          m_Value: Load Level 1
-          m_Target:
-            m_Target: {fileID: 0}
-            m_Path: 
-            m_ValidTypeNames:
-            - System.String
-            m_Type: System.String
-            m_EnumType: 
-      - m_RequirementType: 1
-        m_GroupID: level
-        m_Tooltip: The order of this level within the game. Either level_name or
-          level_index is required.
-        m_Name: level_index
-        m_Value:
-          m_EditingCustomValue: 0
-          m_PopupIndex: 0
-          m_CustomValue: 
-          m_FixedType: 1
-          m_EnumType: 
-          m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
-          m_PropertyType: 1
-          m_ValueType: System.Int32
-          m_Value: 1
+          m_Value: Level 0 >> 1
           m_Target:
             m_Target: {fileID: 0}
             m_Path: 
             m_ValidTypeNames:
             - System.Int32
-            m_Type: System.Int32
+            - System.Boolean
+            - System.Decimal
+            - System.Double
+            - System.Single
+            - System.Int64
+            - System.Int16
+            - System.String
+            m_Type: System.String
             m_EnumType: 
-    m_Name: level_start
+    m_Name: level_load
 --- !u!1 &942337749
 GameObject:
   m_ObjectHideFlags: 0
@@ -17749,55 +17733,39 @@ MonoBehaviour:
     repetitionCount: 0
   m_EventPayload:
     m_IsEventExpanded: 1
-    m_StandardEventType: LevelStart
+    m_StandardEventType: CustomEvent
     m_Parameters:
       m_Parameters:
-      - m_RequirementType: 1
-        m_GroupID: level
-        m_Tooltip: The level name. Either level_name or level_index is required.
+      - m_RequirementType: 0
+        m_GroupID: 
+        m_Tooltip: 
         m_Name: level_name
         m_Value:
           m_EditingCustomValue: 0
           m_PopupIndex: 0
           m_CustomValue: 
-          m_FixedType: 1
+          m_FixedType: 0
           m_EnumType: 
           m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
+          m_CanDisable: 0
           m_PropertyType: 1
           m_ValueType: System.String
-          m_Value: Tutorial Retry
-          m_Target:
-            m_Target: {fileID: 0}
-            m_Path: 
-            m_ValidTypeNames:
-            - System.String
-            m_Type: System.String
-            m_EnumType: 
-      - m_RequirementType: 1
-        m_GroupID: level
-        m_Tooltip: The order of this level within the game. Either level_name or
-          level_index is required.
-        m_Name: level_index
-        m_Value:
-          m_EditingCustomValue: 0
-          m_PopupIndex: 0
-          m_CustomValue: 
-          m_FixedType: 1
-          m_EnumType: 
-          m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
-          m_PropertyType: 1
-          m_ValueType: System.Int32
-          m_Value: 0
+          m_Value: Level 0 Retry
           m_Target:
             m_Target: {fileID: 0}
             m_Path: 
             m_ValidTypeNames:
             - System.Int32
-            m_Type: System.Int32
+            - System.Boolean
+            - System.Decimal
+            - System.Double
+            - System.Single
+            - System.Int64
+            - System.Int16
+            - System.String
+            m_Type: System.String
             m_EnumType: 
-    m_Name: level_start
+    m_Name: level_retry
 --- !u!1 &1027612670
 GameObject:
   m_ObjectHideFlags: 0
