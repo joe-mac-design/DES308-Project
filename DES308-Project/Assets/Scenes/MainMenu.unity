@@ -2146,10 +2146,10 @@ RectTransform:
   m_Father: {fileID: 1265558971}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -741.4991, y: 0}
-  m_SizeDelta: {x: 1500, y: 2500}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0000008586794, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &444323326
 MonoBehaviour:
@@ -3419,8 +3419,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1978110913}
   m_HandleRect: {fileID: 1978110912}
   m_Direction: 0
-  m_Value: -0.00005385455
-  m_Size: 0.98866665
+  m_Value: 1
+  m_Size: 0.99460554
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3595,42 +3595,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "We are a group of researchers from Abertay University and University of
-    Edinburgh. We are carrying out a study to understand what players think about
-    their data being collected by game companies and how it is being used to manipulate
-    their interactions with their games. We are interested to hear your views and
-    develop an investigation into ways players can be better informed and develop
-    way to challenge some of these practices. During each gameplay/interactions with
-    you within the gaming platforms we will take notes from our conversations with
-    you, different aspects of gameplay and interactions we have with the game. During
-    our interactions there will be some questions posed by the researchers and participants
-    can contribute freely and openly when they feel comfortable to share their thoughts
-    on topics discussed. \r\nWe hope to publish our findings in academic journals
-    and media outlets which we will also circulate to you if you would like to find
-    out more about this topic.\r\n\r\nPARTICIPANTS\u2019 RIGHTS\r\n\r\nYou may decide
-    to stop being a part of the research study at any time without explanation. You
-    have the right to ask that any data you have supplied to that point be withdrawn/destroyed.
-    You have the right to omit or refuse to answer or respond to any question that
-    is asked of you. You have the right to have your questions about the procedures
-    answered (unless answering these questions would interfere with the study\u2019s
-    outcome).\r\n\r\nCONFIDENTIALITY/ANONYMITY\r\n\r\nThis study will be used in
-    a research blog and/or in academic research publications. Data from this study
-    will remain confidential and be stored securely. Records that could identify
-    the participants will not be publicly accessible. Publications of this research
-    will not require the names of any participants and so will be anonymised.\r\n\r\nREIMBURSEMENT\r\n\r\nThere
-    are no payments available to participants.\r\n\r\nQuestions\r\n\r\nIf you have
-    any questions as a result of reading this information sheet, you should ask the
-    researchers before the study begins. If you want to find out about the final
-    results of this study, Please contact Dr Hadi Mehrpouya (h.mehrpouya@abertay.ac.uk).\r\n\r\nAlternatively
-    You can contact Dr Tom Boylston (tom.boylston@ed.ac.uk) if you have any questions
-    or comments about the project. \r\n\r\nBy signing below or replying to our message
-    on the gaming platform and confirming that you are happy to take part in this
-    study you are agreeing that: \r\n(1) you have read and understood the Participant
-    Information Sheet, (2) questions about your participation in this study have
-    been answered satisfactorily, (3) you are aware of the potential risks (if any),
-    and (4) you are taking part in this research study voluntarily (without coercion).\r\n\t\r\nParticipant\u2019s
-    Name (Printed)\t_________________________________ \t\t\r\n\r\n\r\n\r\nParticipant\u2019s
-    signature\t_________________________________     Date:____-____-_______\r\n\r\n"
+  m_text: "By conseting you are agreeing to letting this program gather quantitive
+    data on an academic project for the purpose of improving the game as part of
+    the DES308 Analytics and Data-Driven Game Design module at Abertay University.
+    \r\n\r\nAny data collected from this program  is private and will only be accessed
+    by myself, Joseph Mackle. Once the project is completed, the data will be deleted.
+    Any information that could potentially identify you will not be accessible to
+    the public."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3657,15 +3628,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5239,8 +5210,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 388428570}
   m_HandleRect: {fileID: 388428569}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.3132
+  m_Value: 0
+  m_Size: 0
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
