@@ -44,9 +44,4 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void ButtonPressed(string a_button)
-    {
-        DiscordWebhooks.AddLineToTextFile("Log", "Player Viewed: " + a_button);
-    }
-
 }

@@ -52,7 +52,6 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
-        print("Player Started Tutorial");
         DiscordWebhooks.AddLineToTextFile("Log", "Player started Tutorial");
     }
 
@@ -60,24 +59,7 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(2);
         Time.timeScale = 1f;
-        print("Player Progressed to Level 1");
         DiscordWebhooks.AddLineToTextFile("Log", "Player started Level 1");
-    }
-
-    public void QuitGame()
-    {
-        //If we are running in a standalone build of the game
-#if UNITY_STANDALONE
-        //Quit the application
-        Application.Quit();
-#endif
-
-        //If we are running in the editor
-#if UNITY_EDITOR
-        //Stop playing the scene
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
-        Debug.Log("Quitting Game");
     }
 
     void UserNameCheck()
@@ -97,6 +79,38 @@ public class MainMenuController : MonoBehaviour
             _playButton.interactable = false;
             _usernameInput.GetComponent<Image>().color = Color.red;
         }
+    }
+
+    public void ButtonPressed(string a_button)
+    {
+        DiscordWebhooks.AddLineToTextFile("Log", "Player Clicked: " + a_button);
+    }
+
+    public void ScreenVisited(string a_scene)
+    {
+        DiscordWebhooks.AddLineToTextFile("Log", "Player Viewed: " + a_scene);
+    }
+
+    public void LevelProgression(string a_scene)
+    {
+        DiscordWebhooks.AddLineToTextFile("Log", "Player Progressd to: " + a_scene);
+    }
+
+    public void QuitGame()
+    {
+        //If we are running in a standalone build of the game
+#if UNITY_STANDALONE
+        //Quit the application
+        DiscordWebhooks.AddLineToTextFile("Log", "Player Quit game from: " + SceneManager.GetActiveScene().name);
+        Application.Quit();
+#endif
+
+        //If we are running in the editor
+#if UNITY_EDITOR
+        //Stop playing the scene
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        //Debug.Log("Quitting Game");
     }
 
 }

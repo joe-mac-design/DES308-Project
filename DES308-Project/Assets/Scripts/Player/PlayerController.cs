@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
     {
         _rigidBody2D.velocity = new Vector2(_rigidBody2D.velocity.x, 0f);
         _rigidBody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-        Debug.Log("Player Jumped");
+        //Debug.Log("Player Jumped");
     }
 
     private void FallMultiplier()

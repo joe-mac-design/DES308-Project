@@ -87,7 +87,6 @@ public class SawController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<HealthController>().DamageTaken(_sawDamage);
-            Debug.Log("Player took " + _sawDamage + " damage from SAW");
             DiscordWebhooks.AddLineToTextFile("Log", "Player took " + _sawDamage + "HP in level: " + SceneManager.GetActiveScene().name);
         }
     }

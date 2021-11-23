@@ -16566,7 +16566,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 802827854}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: MainMenu
+        m_MethodName: MainMenuCompletion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17664,7 +17664,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 802827854}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: PlayTutorial
+        m_MethodName: RestartTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19465,7 +19465,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 802827854}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: MainMenu
+        m_MethodName: MainMenuFail
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
