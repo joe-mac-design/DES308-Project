@@ -3595,7 +3595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "By conseting you are agreeing to letting this program gather quantitive
+  m_text: "By consenting you are agreeing to letting this program gather quantitive
     data on an academic project for the purpose of improving the game as part of
     the DES308 Analytics and Data-Driven Game Design module at Abertay University.
     \r\n\r\nAny data collected from this program  is private and will only be accessed
