@@ -8,77 +8,47 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
 
-    public Canvas ConsentCanvas;
-    public GameObject MainMenuCanvas;
-
-    private void Start()
-    {
-        if (PlayerPrefs.HasKey("Consented"))
-        {
-            if (PlayerPrefs.GetInt("Consented") == 1)
-            {
-                ConsentCanvas.gameObject.SetActive(false);
-                PlayerPrefs.DeleteAll();
-                MainMenuCanvas.SetActive(true);
-            }
-        }
-
-    }
-
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
-        AnalyticsResult result = AnalyticsEvent.LevelStart(0);
-        print("Player Returned to Main Menu" + result);
-    }
-
-    public void URL()
-    {
-        Application.OpenURL("https://forms.gle/cffUVRJ3LVz3rQdt8");
-        Debug.Log("URL Opened");
-    }
-
-    public void PlayTutorial()
-    {
-        SceneManager.LoadScene(1);
-        Time.timeScale = 1f;
-        AnalyticsResult result = AnalyticsEvent.LevelStart(1);
-        print("Player Started Tutorial" + result);
+        print("Player Returned to Main Menu");
     }
 
     public void PlayLevel1()
     {
         SceneManager.LoadScene(2);
         Time.timeScale = 1f;
-        AnalyticsResult result = AnalyticsEvent.LevelStart(2);
-        print("Player Progressed to Level 1" + result);
+        print("Player Progressed to Level 1");
     }
 
     public void PlayLevel2()
     {
         SceneManager.LoadScene(3);
         Time.timeScale = 1f;
-        AnalyticsResult result = AnalyticsEvent.LevelStart(3);
-        print("Player Progressed to Level 2" + result);
+        print("Player Progressed to Level 2");
     }
 
     public void PlayLevel3()
     {
         SceneManager.LoadScene(4);
         Time.timeScale = 1f;
-        AnalyticsResult result = AnalyticsEvent.LevelStart(4);
-        print("Player Progressed to Level 3" + result);
+        print("Player Progressed to Level 3");
     }
 
     public void QuitGame()
     {
+        //If we are running in a standalone build of the game
+#if UNITY_STANDALONE
+        //Quit the application
         Application.Quit();
+#endif
+
+        //If we are running in the editor
+#if UNITY_EDITOR
+        //Stop playing the scene
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
         Debug.Log("Quitting Game");
     }
-
-    public void Consent()
-    {
-        PlayerPrefs.SetInt("Consented",1);
-        PlayerPrefs.Save();
-    } 
+ 
 }

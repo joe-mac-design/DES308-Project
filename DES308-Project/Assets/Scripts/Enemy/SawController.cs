@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SawController : MonoBehaviour
 {
@@ -87,6 +88,7 @@ public class SawController : MonoBehaviour
         {
             collision.GetComponent<HealthController>().DamageTaken(_sawDamage);
             Debug.Log("Player took " + _sawDamage + " damage from SAW");
+            DiscordWebhooks.AddLineToTextFile("Log", "Player took " + _sawDamage + " in level " + SceneManager.GetActiveScene().name);
         }
     }
 }

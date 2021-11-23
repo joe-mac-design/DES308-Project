@@ -12,5 +12,11 @@ public class ReadInput : MonoBehaviour
     {
         _input = TextInput;
         DataRecorder.recordPlayerID(_input);
+
+        PlayerPrefs.SetString("Username", _input); // FileName
+        PlayerPrefs.Save();
+
+        DiscordWebhooks.AddLineToTextFile("Log", "Username: " + _input);
+
     }
 }

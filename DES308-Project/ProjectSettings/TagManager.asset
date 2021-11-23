@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - heatmap
+  - GameManager
   layers:
   - Default
   - TransparentFX
