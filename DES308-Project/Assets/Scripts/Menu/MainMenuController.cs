@@ -4,12 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MainMenuController : MonoBehaviour
 {
 
     public Canvas ConsentCanvas;
     public GameObject MainMenuCanvas;
+
+    [SerializeField] private TMP_InputField _usernameInput;
+    public Button _playButton;
 
     // Start is called before the first frame update
     private void Start()
@@ -19,12 +23,19 @@ public class MainMenuController : MonoBehaviour
             if (PlayerPrefs.GetInt("Consented") == 1)
             {
                 ConsentCanvas.gameObject.SetActive(false);
-                PlayerPrefs.DeleteAll();
                 MainMenuCanvas.SetActive(true);
             }
         }
 
+        if (PlayerPrefs.HasKey("Username"))
+        {
+            _usernameInput.text = PlayerPrefs.GetString("Username");
+            _usernameInput.interactable = false;
+        }
+
+        _usernameInput.onEndEdit.AddListener(delegate { UserNameCheck(); });
     }
+
     public void Consent()
     {
         PlayerPrefs.SetInt("Consented", 1);
@@ -41,16 +52,16 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
-        AnalyticsResult result = AnalyticsEvent.LevelStart(1);
-        print("Player Started Tutorial" + result);
+        print("Player Started Tutorial");
+        DiscordWebhooks.AddLineToTextFile("Log", "Player started Tutorial");
     }
 
     public void PlayLevel1()
     {
         SceneManager.LoadScene(2);
         Time.timeScale = 1f;
-        AnalyticsResult result = AnalyticsEvent.LevelStart(2);
-        print("Player Progressed to Level 1" + result);
+        print("Player Progressed to Level 1");
+        DiscordWebhooks.AddLineToTextFile("Log", "Player started Level 1");
     }
 
     public void QuitGame()
@@ -67,6 +78,25 @@ public class MainMenuController : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
         Debug.Log("Quitting Game");
+    }
+
+    void UserNameCheck()
+    {
+
+        if (_usernameInput.text.Length >= 3)
+        {
+            _playButton.interactable = true;
+            PlayerPrefs.SetString("Username", _usernameInput.text); // FileName
+            PlayerPrefs.Save();
+
+            DiscordWebhooks.AddLineToTextFile("Log", "Username: " + _usernameInput.text);
+            _usernameInput.GetComponent<Image>().color = Color.green;
+            _usernameInput.interactable = false;
+        } else
+        {
+            _playButton.interactable = false;
+            _usernameInput.GetComponent<Image>().color = Color.red;
+        }
     }
 
 }

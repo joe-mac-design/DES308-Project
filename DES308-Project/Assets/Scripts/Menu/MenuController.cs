@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         print("Player Returned to Main Menu");
+        DiscordWebhooks.AddLineToTextFile("Log", "Player returned to main menu from " + SceneManager.GetActiveScene().name);
     }
 
     public void PlayLevel1()
@@ -19,6 +20,7 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(2);
         Time.timeScale = 1f;
         print("Player Progressed to Level 1");
+        DiscordWebhooks.AddLineToTextFile("Log", "Player started Level 1");
     }
 
     public void PlayLevel2()
@@ -26,6 +28,7 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(3);
         Time.timeScale = 1f;
         print("Player Progressed to Level 2");
+        DiscordWebhooks.AddLineToTextFile("Log", "Player started Level 2");
     }
 
     public void PlayLevel3()
@@ -33,6 +36,7 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(4);
         Time.timeScale = 1f;
         print("Player Progressed to Level 3");
+        DiscordWebhooks.AddLineToTextFile("Log", "Player started Level 3");
     }
 
     public void QuitGame()

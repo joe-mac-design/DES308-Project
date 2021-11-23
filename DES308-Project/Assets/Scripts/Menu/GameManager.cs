@@ -17,18 +17,16 @@ public class GameManager : MonoBehaviour
         {
             m_Instance = null;
             Destroy(this.gameObject);
+            return;
         }
         DontDestroyOnLoad(this.gameObject);
         m_Instance = this;
 
+        Application.wantsToQuit += WantsToQuit;
+
         DiscordWebhooks.ClearTextFile("Log");
-        DiscordWebhooks.AddLineToTextFile("Log", "Game Started");
+        DiscordWebhooks.AddLineToTextFile("Log", "Game Started " + AnalyticsSessionInfo.sessionElapsedTime);
         DiscordWebhooks.AddLineToTextFile("Log", "App version is: " + Application.version);
-    }
-
-    void OnApplicationQuit()
-    {
-
     }
 
     bool WantsToQuit()
@@ -36,12 +34,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("Player prevented from quitting.");
         m_Instance.StartCoroutine(SubmitFiles());
         return false;
-    }
-
-    [RuntimeInitializeOnLoadMethod]
-    void RunOnStart()
-    {
-        Application.wantsToQuit += WantsToQuit;
     }
 
     IEnumerator SubmitFiles()

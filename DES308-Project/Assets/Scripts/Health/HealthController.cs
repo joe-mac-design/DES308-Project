@@ -36,6 +36,6 @@ public class HealthController : MonoBehaviour
     {
         _currentHealth = Mathf.Clamp(_currentHealth + _healthValue, 0, _defaultHealth); // Assign a value to the object
         Debug.Log("Player restored " + _healthValue + " Health point");
-        DiscordWebhooks.AddLineToTextFile("Log", "Player restored HP in level: " + SceneManager.GetActiveScene().name);
+        DiscordWebhooks.AddLineToTextFile("Log", "Player restored " + _healthValue + "HP in level: " + SceneManager.GetActiveScene().name);
     }
 }
