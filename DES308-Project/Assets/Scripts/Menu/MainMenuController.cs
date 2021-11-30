@@ -27,13 +27,23 @@ public class MainMenuController : MonoBehaviour
             }
         }
 
+        _usernameInput.onEndEdit.AddListener(delegate { UserNameCheck(); });
+
+        PPUserNameCheck();
+        UserNameCheck();
+    }
+
+    void PPUserNameCheck() //  Testing only
+    {
         if (PlayerPrefs.HasKey("Username"))
         {
             _usernameInput.text = PlayerPrefs.GetString("Username");
             _usernameInput.interactable = false;
+        } else
+        {
+            _usernameInput.text = "";
+            _usernameInput.interactable = true;
         }
-
-        _usernameInput.onEndEdit.AddListener(delegate { UserNameCheck(); });
     }
 
     public void Consent()
@@ -46,6 +56,12 @@ public class MainMenuController : MonoBehaviour
     {
         Application.OpenURL("https://forms.gle/cffUVRJ3LVz3rQdt8");
         Debug.Log("URL Opened");
+    }
+    public void ClearData() // Testing only
+    {
+        PlayerPrefs.DeleteAll();
+        PPUserNameCheck();
+        UserNameCheck();
     }
 
     public void PlayTutorial()
