@@ -13,7 +13,7 @@ public class PlayerKillCollider : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             DataRecorder.recordDeathPosition3D(collision.transform.position);
-            DiscordWebhooks.AddLineToTextFile("Log", "Player fell of the map at: " + collision.transform.position + " in level: " + SceneManager.GetActiveScene().name + " and took" + _Damage);
+            DiscordWebhooks.AddLineToTextFile("Log", "Player fell of the map at: " + collision.transform.position + " in level: " + SceneManager.GetActiveScene().name + " and took " + _Damage + " damage");
             collision.GetComponent<HealthController>().SendMessage("DamageTaken", _Damage);
             collision.transform.position = _respawnPoint.position;
         }
