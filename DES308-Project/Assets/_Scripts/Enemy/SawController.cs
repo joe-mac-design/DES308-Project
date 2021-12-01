@@ -7,6 +7,7 @@ public class SawController : MonoBehaviour
 {
     [Header("Damage")]
     [SerializeField] private float _sawDamage;
+    [SerializeField] private Renderer _playerRenderer;
 
     [Header("Movement")]
     [SerializeField] private float _horizontalDistance;
@@ -87,7 +88,16 @@ public class SawController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<HealthController>().DamageTaken(_sawDamage);
+            _playerRenderer.material.color = Color.red;
             DiscordWebhooks.AddLineToTextFile("Log", "Player took " + _sawDamage + "HP, from SawBlade, in level: " + SceneManager.GetActiveScene().name);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            _playerRenderer.material.color = Color.white;
         }
     }
 }

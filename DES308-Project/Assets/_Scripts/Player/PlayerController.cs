@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Components")]
     private Rigidbody2D _rigidBody2D;
+    [SerializeField] private ParticleSystem _Dust2D;
 
     [Header("Layer Masks")]
     [SerializeField] private LayerMask _groundLayer;
@@ -85,6 +86,8 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyAirLinearDrag()
     {
+        CreateDust();
+
         _rigidBody2D.drag = _airLinearDrag;
     }
 
@@ -129,5 +132,10 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawLine(transform.position + _groundRaycastOffset, transform.position + _groundRaycastOffset + Vector3.down * _groundRaycastLength);
         Gizmos.DrawLine(transform.position - _groundRaycastOffset, transform.position - _groundRaycastOffset + Vector3.down * _groundRaycastLength);
 
+    }
+
+    void CreateDust()
+    {
+        _Dust2D.Play();
     }
 }
