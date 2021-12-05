@@ -35748,7 +35748,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.45, y: 3.5}
-  m_SizeDelta: {x: 5, y: 2}
+  m_SizeDelta: {x: 6, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780376639
 MonoBehaviour:
@@ -35770,7 +35770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Reach the flag to\n complete the level!"
+  m_text: "Reach the Red flag to\n complete the level!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -36145,7 +36145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 817907708}
   m_Layer: 0
-  m_Name: ==HealthContainer==
+  m_Name: //==HealthContainer==
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37410,7 +37410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1001766987}
   m_Layer: 0
-  m_Name: ======Camera======
+  m_Name: $======Camera======
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54662,7 +54662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1502970898}
   m_Layer: 0
-  m_Name: ==SawContainer==
+  m_Name: //==SawContainer==
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54758,7 +54758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619362728}
   m_Layer: 0
-  m_Name: ==SuspendedTrapContainer==
+  m_Name: //==SuspendedTrapContainer==
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54961,7 +54961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701582637}
   m_Layer: 0
-  m_Name: ========UI========
+  m_Name: '@========UI========'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56543,7 +56543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2098128146}
   m_Layer: 0
-  m_Name: ====LevelManager====
+  m_Name: ///====LevelManager====
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
