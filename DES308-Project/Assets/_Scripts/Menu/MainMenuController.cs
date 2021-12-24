@@ -54,7 +54,7 @@ public class MainMenuController : MonoBehaviour
 
     public void URL()
     {
-        Application.OpenURL("https://forms.gle/EDBXQKkRvczuy1UB8");
+        Application.OpenURL("https://forms.gle/QGU2XPB4DxNZXfRcA");
         Debug.Log("URL Opened");
     }
     public void ClearData() // Testing only
