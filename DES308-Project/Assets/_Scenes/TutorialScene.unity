@@ -37326,7 +37326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9872982ed92b92a4fbaa17cdf46d3a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _respawnPoint: {fileID: 112640957}
   _Damage: 1
 --- !u!61 &956288684
 BoxCollider2D:
@@ -37979,7 +37978,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9872982ed92b92a4fbaa17cdf46d3a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _respawnPoint: {fileID: 1323766111}
   _Damage: 1
 --- !u!4 &1240807002 stripped
 Transform:
