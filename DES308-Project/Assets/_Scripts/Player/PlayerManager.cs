@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
+        _lastCheckPointPos = transform.position;
         GameObject.FindGameObjectWithTag("Player").transform.position = _lastCheckPointPos;
     }
 }

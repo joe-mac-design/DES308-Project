@@ -34939,7 +34939,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 802827854}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: RestartLevel2
+        m_MethodName: RestartLevel3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -63562,7 +63562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1323766111}
   m_Layer: 0
-  m_Name: RespawnPoint
+  m_Name: StartPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

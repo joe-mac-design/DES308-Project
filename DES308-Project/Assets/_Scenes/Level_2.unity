@@ -36773,7 +36773,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 886563503}
   m_OnClick:
     m_PersistentCalls:
@@ -37646,7 +37646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9872982ed92b92a4fbaa17cdf46d3a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _respawnPoint: {fileID: 475648712}
   _Damage: 1
 --- !u!61 &1200879408
 BoxCollider2D:
@@ -37758,7 +37757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9872982ed92b92a4fbaa17cdf46d3a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _respawnPoint: {fileID: 1323766111}
   _Damage: 1
 --- !u!1 &1273371809
 GameObject:
@@ -37886,7 +37884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1323766111}
   m_Layer: 0
-  m_Name: RespawnPoint
+  m_Name: StartPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
