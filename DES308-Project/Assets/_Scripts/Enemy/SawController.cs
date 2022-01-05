@@ -89,6 +89,7 @@ public class SawController : MonoBehaviour
         {
             collision.GetComponent<HealthController>().DamageTaken(_sawDamage);
             _playerRenderer.material.color = Color.red;
+            AudioManager.instance.Play("Damage");
             DiscordWebhooks.AddLineToTextFile("Log", "Player took " + _sawDamage + "HP, from SawBlade, in level: " + SceneManager.GetActiveScene().name);
         }
     }

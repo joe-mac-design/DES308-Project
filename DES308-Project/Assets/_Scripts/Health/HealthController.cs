@@ -26,6 +26,7 @@ public class HealthController : MonoBehaviour
             deathCanvas.SetActive(true);
             Destroy(gameObject);
             Time.timeScale = 0f;
+            AudioManager.instance.Play("GameOver");
             DiscordWebhooks.AddLineToTextFile("Log", "Player Died in level: " + SceneManager.GetActiveScene().name);
         }
         

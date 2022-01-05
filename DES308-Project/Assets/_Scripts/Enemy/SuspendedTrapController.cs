@@ -15,6 +15,7 @@ public class SuspendedTrapController : MonoBehaviour
         {
             collision.GetComponent<HealthController>().DamageTaken(_stDamage);
             _playerRenderer.material.color = Color.red;
+            AudioManager.instance.Play("Damage");
             DiscordWebhooks.AddLineToTextFile("Log", "Player took " + _stDamage + "HP, from Suspended Trap, in level: " + SceneManager.GetActiveScene().name);
         }
     }

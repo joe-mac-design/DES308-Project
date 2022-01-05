@@ -12,6 +12,7 @@ public class HealthCollectible : MonoBehaviour
         {
             collision.GetComponent<HealthController>().AddHealth(_healthValue);
             gameObject.SetActive(false);
+            AudioManager.instance.Play("HeartCollection");
             Debug.Log("Player picked up Health");
         }
     }

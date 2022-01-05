@@ -9,6 +9,7 @@ public class CheckPointController : MonoBehaviour
         if(collision.transform.tag == "Player")
         {
             PlayerManager._lastCheckPointPos = transform.position;
+            AudioManager.instance.Play("CheckPoint");
         }
     }
 }
