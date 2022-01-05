@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -11,6 +12,13 @@ public class MainMenuController : MonoBehaviour
 
     public Canvas ConsentCanvas;
     public GameObject MainMenuCanvas;
+
+    public Slider _sfxVolumeSlider;
+    public Slider _musicVolumeSlider;
+    public AudioMixer _sfxAudioMixer;
+    public AudioMixer _musicAudioMixer;
+    private float _sfxAudioValue;
+    private float _musicAudioValue;
 
     [SerializeField] private TMP_InputField _usernameInput;
     public Button _playButton;
@@ -31,6 +39,12 @@ public class MainMenuController : MonoBehaviour
 
         PPUserNameCheck();
         UserNameCheck();
+
+        _sfxAudioMixer.GetFloat("SFXVolume", out _sfxAudioValue);
+        _sfxVolumeSlider.value = _sfxAudioValue;
+
+        _musicAudioMixer.GetFloat("MusicVolume", out _musicAudioValue);
+        _musicVolumeSlider.value = _musicAudioValue;
     }
 
     void PPUserNameCheck() //  Testing only
@@ -44,6 +58,16 @@ public class MainMenuController : MonoBehaviour
             _usernameInput.text = "";
             _usernameInput.interactable = true;
         }
+    }
+
+    public void setVolume()
+    {
+        _sfxAudioMixer.SetFloat("SFXVolume", _sfxVolumeSlider.value);
+    }
+
+    public void setMusicVolume()
+    {
+        _musicAudioMixer.SetFloat("MusicVolume", _musicVolumeSlider.value);
     }
 
     public void Consent()

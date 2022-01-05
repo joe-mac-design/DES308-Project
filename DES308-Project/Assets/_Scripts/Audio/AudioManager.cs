@@ -39,4 +39,5 @@ public class AudioManager : MonoBehaviour {
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		s.source.Stop();
 	}
+
 }

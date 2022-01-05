@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
         DiscordWebhooks.ClearTextFile("Log");
         DiscordWebhooks.AddLineToTextFile("Log", "Game Started " + AnalyticsSessionInfo.sessionElapsedTime);
         DiscordWebhooks.AddLineToTextFile("Log", "App version is: " + Application.version);
+
+        AudioManager.instance.Play("Music");
     }
 
     bool WantsToQuit()

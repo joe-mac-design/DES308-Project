@@ -6,6 +6,7 @@ TagManager:
   tags:
   - heatmap
   - GameManager
+  - AudioManager
   layers:
   - Default
   - TransparentFX
