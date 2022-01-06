@@ -82,6 +82,48 @@ public class MenuController : MonoBehaviour
         DiscordWebhooks.AddLineToTextFile("Log", "Player restarted Tutorial");
     }
 
+    public static bool GameIsPaused = false;
+
+    public GameObject PauseMenu;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = true;
+    }
+
+    public void Pause()
+    {
+        PauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
+    }
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
     public void QuitGame()
     {
         //If we are running in a standalone build of the game
