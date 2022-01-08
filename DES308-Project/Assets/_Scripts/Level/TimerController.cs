@@ -9,6 +9,7 @@ public class TimerController : MonoBehaviour
     public static TimerController instance;
 
     public TMP_Text _timeCounter;
+    public TMP_Text _endTimeCounter;
 
     private TimeSpan _timePlaying;
     private bool _timerGoing;
@@ -38,6 +39,7 @@ public class TimerController : MonoBehaviour
     public void EndTimer()
     {
         _timerGoing = false;
+        _endTimeCounter.text = "Time: " + _timePlaying.ToString("mm':'ss'.'ff");
     }
 
     private IEnumerator UpdateTimer()
