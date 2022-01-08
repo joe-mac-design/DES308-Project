@@ -17,6 +17,7 @@ public class FlagController : MonoBehaviour
             tutorialCanvas.SetActive(true);
             Time.timeScale = 0f;
             AudioManager.instance.Play("LevelComplete");
+            TimerController.instance.EndTimer();
             string completedHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>()._currentHealth + "HP Left";
             DiscordWebhooks.AddLineToTextFile("Log", "Player Reached the finish at level: " + SceneManager.GetActiveScene().name + " with a time of: " + Time.timeSinceLevelLoad + " with " + completedHealth);
         }

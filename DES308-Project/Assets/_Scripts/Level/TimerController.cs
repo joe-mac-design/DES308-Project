@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class TimerController : MonoBehaviour
@@ -24,7 +23,8 @@ public class TimerController : MonoBehaviour
     void Start()
     {
         _timeCounter.text = "Time: 00:00.00";
-        _timerGoing = false;
+        _timerGoing = true;
+        TimerController.instance.BeginTimer();
     }
 
     public void BeginTimer()

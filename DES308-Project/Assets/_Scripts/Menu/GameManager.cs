@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         DiscordWebhooks.AddLineToTextFile("Log", "App version is: " + Application.version);
 
         AudioManager.instance.Play("Music");
+
     }
 
     bool WantsToQuit()
