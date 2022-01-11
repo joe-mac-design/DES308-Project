@@ -5,6 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
+/*
+Script created by myself.
+*/
+
 public class MenuController : MonoBehaviour
 {
 

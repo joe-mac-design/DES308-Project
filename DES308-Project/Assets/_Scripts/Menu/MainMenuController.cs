@@ -7,6 +7,10 @@ using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+/*
+Script created by myself.
+*/
+
 public class MainMenuController : MonoBehaviour
 {
 

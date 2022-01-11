@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 
+/*
+Script Provided by: GDTitan on YouTube: https://www.youtube.com/c/GDTitans
+*/
+
 [System.Serializable]
 public class Sound {
 

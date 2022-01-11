@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Script created by myself
+*/
+
 public class JumpPadController : MonoBehaviour
 {
     [SerializeField] private float _padBounce = 20f;

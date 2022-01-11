@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Script provided by Root Games on Youtube: https://www.youtube.com/channel/UC_N2G2u2ySuWH3DgkXkpCMw
+*/
+
 public class M_Platform_Controller : MonoBehaviour
 {
     [Header("Movement")]

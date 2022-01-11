@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Script created myself
+*/
+
 public class PlayerKillCollider : MonoBehaviour
 {
     //[SerializeField] Transform _respawnPoint;

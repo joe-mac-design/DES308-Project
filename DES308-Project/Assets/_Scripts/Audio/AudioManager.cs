@@ -1,6 +1,10 @@
 using System;
 using UnityEngine;
 
+/*
+Script Provided by: GDTitan on YouTube: https://www.youtube.com/c/GDTitans
+*/
+
 public class AudioManager : MonoBehaviour {
 
 	public static AudioManager instance;

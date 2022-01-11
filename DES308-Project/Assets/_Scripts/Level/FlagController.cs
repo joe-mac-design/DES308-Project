@@ -5,6 +5,10 @@ using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+Script created by myself
+*/
+
 public class FlagController : MonoBehaviour
 {
     [SerializeField] private GameObject tutorialCanvas;

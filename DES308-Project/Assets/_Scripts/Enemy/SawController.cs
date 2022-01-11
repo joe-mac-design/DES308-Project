@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Script Provided by: Pandemonium on YouTube: https://www.youtube.com/channel/UCpkMj5b5kl2_YApDvgUCVQQ
+- Script edited by me to allow for more flexibility.
+*/
+
 public class SawController : MonoBehaviour
 {
     [Header("Damage")]

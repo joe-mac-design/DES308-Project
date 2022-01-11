@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Script created by myself.
+*/
+
 public class SpikeController : MonoBehaviour
 {
     [Header("Damage")]

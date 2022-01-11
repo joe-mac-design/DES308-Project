@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Script provided by: Tactical Programmer on Youtube: https://www.youtube.com/c/TacticalProgrammer
+- Script adjusted to fit my needs.
+*/
+
 public class PlayerController : MonoBehaviour
 {
     [Header("Components")]

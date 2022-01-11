@@ -5,6 +5,11 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using UnityEngine;
 
+/*
+ Provided by class colleague: Morgan Finney
+- Allows for data collection to be sent to discord via webhook.
+*/
+
 //* Created by Morgan Finney 17/11/21
 //* Thanks to Liam Rickman for helping get this started
 

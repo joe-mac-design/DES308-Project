@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/*
+Script provided by Turbo Makes Games on Youtube: https://www.youtube.com/c/TurboMakesGames
+*/
+
 public class TimerController : MonoBehaviour
 {
     public static TimerController instance;
